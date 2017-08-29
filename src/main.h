@@ -1,5 +1,6 @@
 #pragma once
 
+#include <ignition/transport.hh>
 #include <QWidget>
 #include <QtWidgets/QMainWindow>
 
@@ -19,5 +20,6 @@ private slots:
   void on_exit();
 
 private:
+  ignition::transport::Node node;
   Ui::MainWindow *ui;
 };

@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 
   MainWindow window;
 
-  window.setWindowTitle("Simple example");
+  window.setWindowTitle("SmartMouse Simulator");
   window.show();
 
   return app.exec();
