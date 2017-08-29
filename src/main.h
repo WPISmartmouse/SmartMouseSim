@@ -15,9 +15,8 @@ public:
 
   virtual ~MainWindow();
 
-//private slots:
-//  void on_inputSpinBox1_valueChanged(int value);
-//  void on_inputSpinBox2_valueChanged(int value);
+private slots:
+  void on_exit();
 
 private:
   Ui::MainWindow *ui;
