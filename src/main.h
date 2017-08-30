@@ -1,4 +1,5 @@
 #pragma once
+#include <time.h>
 
 #include <ignition/transport.hh>
 #include <QWidget>
@@ -18,14 +19,14 @@ public:
 
 private slots:
 
-  void on_exit();
+  void OnExit();
 
-  void play();
+  void Play();
 
-  void pause();
+  void Pause();
 
 private:
-  void on_world_control(const ignition::msgs::WorldControl &msg);
+  void OnWorldControl(const ignition::msgs::WorldControl &msg);
 
   ignition::transport::Node node;
   Ui::MainWindow *ui;
