@@ -23,3 +23,5 @@ add_library(server src/Server.cpp)
 add_executable(SmartmouseSim src/main.cpp)
 
 target_link_libraries(SmartmouseSim Qt5::Widgets ${IGNITION-TRANSPORT_LIBRARIES} server common)
+
+install(TARGETS SmartmouseSim DESTINATION bin)
