@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>SmartmouseSim</name>
+  <version>0.0.0</version>
+  <description>Simulator for Team Smartmouse</description>
+  <maintainer email="mitranopeter@gmail.com">Peter Mitrano</maintainer>
+  <license>Apache 2.0</license>
+
+  <url type="bugtracker">https://github.com/WPISmartmouse/SmartmouseSim/issues</url>
+  <url type="repository">https://github.com/WPISmartmouse/SmartmouseSim</url>
+
+  <author>Peter Mitrano</author>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <buildtool_export_depend>cmake</buildtool_export_depend>
+</package>

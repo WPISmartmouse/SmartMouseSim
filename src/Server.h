@@ -2,6 +2,7 @@
 
 #include <thread>
 #include <ignition/transport/Node.hh>
+#include "Time.h"
 
 class Server {
 
@@ -16,11 +17,15 @@ class Server {
   void join();
  private:
   void OnWorldControl(const ignition::msgs::WorldControl &msg);
+  void OnPhysics(const ignition::msgs::Physics &msg);
 
   ignition::transport::Node *node_ptr_;
-  ignition::transport::Node::Publisher world_stats_pub;
-  google::protobuf::uint64 iterations_ = 0UL;
-  std::mutex physics_mutex;
+  ignition::transport::Node::Publisher world_stats_pub_;
+  Time sim_time_;
+  int32_t iterations_ = 0UL;
+  std::mutex physics_mutex_;
   bool pause_;
   bool quit_;
+  int ns_per_iteration_ = 100000000u;
+  unsigned int pause_at_steps_;
 };

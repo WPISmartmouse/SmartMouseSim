@@ -17,7 +17,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${IGNITION-TRANSPORT_CXX_FLAGS}")
 include_directories(${IGNITION-TRANSPORT_INCLUDE_DIRS})
 link_directories(${IGNITION-TRANSPORT_LIBRARY_DIRS})
 
-add_library(common src/Time.cc)
+add_library(common src/Time.cpp)
 add_library(server src/Server.cpp)
 
 add_executable(SmartmouseSim src/main.cpp)

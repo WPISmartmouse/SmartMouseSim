@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>643</width>
+    <width>681</width>
     <height>600</height>
    </rect>
   </property>
@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -34,7 +34,14 @@
         <item row="0" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Real Time Factor</string>
+           <string>Step Time (ms)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QSpinBox" name="step_time_ms_spinner">
+          <property name="maximum">
+           <number>10000</number>
           </property>
          </widget>
         </item>
@@ -79,6 +86,13 @@
          </widget>
         </item>
         <item>
+         <widget class="QPushButton" name="step_once_button">
+          <property name="text">
+           <string>Step Once</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QLabel" name="time_label">
           <property name="text">
            <string>Time:</string>
@@ -103,7 +117,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>643</width>
+     <width>681</width>
      <height>19</height>
     </rect>
    </property>
