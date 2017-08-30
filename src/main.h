@@ -17,9 +17,17 @@ public:
   virtual ~MainWindow();
 
 private slots:
+
   void on_exit();
 
+  void play();
+
+  void pause();
+
 private:
+  void on_world_control(const ignition::msgs::WorldControl &msg);
+
   ignition::transport::Node node;
   Ui::MainWindow *ui;
+  ignition::transport::Node::Publisher world_control_pub;
 };
