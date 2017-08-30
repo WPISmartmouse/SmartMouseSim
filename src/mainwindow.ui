@@ -124,7 +124,8 @@
      <string>Help</string>
     </property>
     <addaction name="actionAbout"/>
-    <addaction name="actionWebsite"/>
+    <addaction name="actionSourceCode"/>
+    <addaction name="actionWiki"/>
    </widget>
    <widget class="QMenu" name="menuWorld">
     <property name="title">
@@ -149,9 +150,9 @@
     <string>About</string>
    </property>
   </action>
-  <action name="actionWebsite">
+  <action name="actionSourceCode">
    <property name="text">
-    <string>Website</string>
+    <string>Source Code</string>
    </property>
   </action>
   <action name="actionDebug_Console">
@@ -167,6 +168,11 @@
   <action name="actionReset_Time_Mouse">
    <property name="text">
     <string>Reset Time + Mouse</string>
+   </property>
+  </action>
+  <action name="actionWiki">
+   <property name="text">
+    <string>Wiki</string>
    </property>
   </action>
  </widget>

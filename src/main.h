@@ -25,6 +25,10 @@ private slots:
 
   void Pause();
 
+  void ShowSourceCode();
+
+  void ShowWiki();
+
 private:
   void OnWorldControl(const ignition::msgs::WorldControl &msg);
 

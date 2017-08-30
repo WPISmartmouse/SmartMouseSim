@@ -1,6 +1,8 @@
 #include <QApplication>
 #include <QWidget>
 #include <getopt.h>
+#include <QtCore/QUrl>
+#include <QtGui/QDesktopServices>
 
 #include "main.h"
 #include "ui_mainwindow.h"
@@ -13,6 +15,8 @@ MainWindow::MainWindow(QMainWindow *parent) :
   ui->setupUi(this);
 
   connect(ui->actionExit, SIGNAL(triggered()), this, SLOT(OnExit()));
+  connect(ui->actionSourceCode, SIGNAL(triggered()), this, SLOT(ShowSourceCode()));
+  connect(ui->actionWiki, SIGNAL(triggered()), this, SLOT(ShowWiki()));
   connect(ui->play_button, SIGNAL(clicked()), this, SLOT(Play()));
   connect(ui->pause_button, SIGNAL(clicked()), this, SLOT(Pause()));
 
@@ -45,6 +49,13 @@ void MainWindow::Pause() {
 
 void MainWindow::OnWorldControl(const ignition::msgs::WorldControl &msg) {
   std::cout << msg.DebugString() << std::endl;
+}
+void MainWindow::ShowWiki() {
+  QDesktopServices::openUrl(QUrl("https://github.com/WPISmartMouse/SmartmouseSim/wiki", QUrl::TolerantMode));
+}
+
+void MainWindow::ShowSourceCode() {
+  QDesktopServices::openUrl(QUrl("https://github.com/WPISmartMouse/SmartmouseSim", QUrl::TolerantMode));
 }
 
 int main(int argc, char *argv[]) {
